@@ -37,13 +37,13 @@ import 'selected_image_view_widget.dart';
 
 class SendMessageWidget extends StatefulWidget {
   const SendMessageWidget({
-    Key? key,
+    super.key,
     required this.onSendTap,
     this.sendMessageConfig,
     this.sendMessageBuilder,
     this.messageConfig,
     this.replyMessageBuilder,
-  }) : super(key: key);
+  });
 
   /// Provides call back when user tap on send button on text field.
   final StringMessageCallBack onSendTap;

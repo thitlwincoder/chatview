@@ -34,7 +34,7 @@ import 'reaction_widget.dart';
 
 class VoiceMessageView extends StatefulWidget {
   const VoiceMessageView({
-    Key? key,
+    super.key,
     required this.screenWidth,
     required this.message,
     required this.isMessageBySender,
@@ -43,7 +43,7 @@ class VoiceMessageView extends StatefulWidget {
     this.onMaxDuration,
     this.messageReactionConfig,
     this.config,
-  }) : super(key: key);
+  });
 
   /// Provides configuration related to voice message.
   final VoiceMessageConfiguration? config;

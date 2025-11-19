@@ -27,7 +27,7 @@ import 'profile_image_widget.dart';
 
 class ProfileCircle extends StatelessWidget {
   const ProfileCircle({
-    Key? key,
+    super.key,
     required this.bottomPadding,
     this.imageUrl,
     this.profileCirclePadding,
@@ -39,7 +39,7 @@ class ProfileCircle extends StatelessWidget {
     this.networkImageErrorBuilder,
     this.imageType = ImageType.network,
     this.networkImageProgressIndicatorBuilder,
-  }) : super(key: key);
+  });
 
   /// Allow users to give  default bottom padding according to user case.
   final double bottomPadding;

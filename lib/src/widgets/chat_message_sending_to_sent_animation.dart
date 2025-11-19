@@ -26,8 +26,7 @@ import 'package:chatview_utils/chatview_utils.dart';
 import 'package:flutter/material.dart';
 
 class SendingMessageAnimatingWidget extends StatefulWidget {
-  const SendingMessageAnimatingWidget(this.status, {Key? key})
-      : super(key: key);
+  const SendingMessageAnimatingWidget(this.status, {super.key});
 
   final MessageStatus status;
 
@@ -42,7 +41,7 @@ class _SendingMessageAnimatingWidgetState
 
   bool isVisible = false;
 
-  _attachOnStatusChangeListeners() {
+  void _attachOnStatusChangeListeners() {
     if (isSent) {
       Future.delayed(const Duration(milliseconds: 400), () {
         isVisible = true;

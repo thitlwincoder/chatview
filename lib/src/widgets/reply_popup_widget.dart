@@ -25,7 +25,7 @@ import '../utils/package_strings.dart';
 
 class ReplyPopupWidget extends StatelessWidget {
   const ReplyPopupWidget({
-    Key? key,
+    super.key,
     required this.sentByCurrentUser,
     required this.onUnsendTap,
     required this.onReplyTap,
@@ -33,7 +33,7 @@ class ReplyPopupWidget extends StatelessWidget {
     required this.onMoreTap,
     this.buttonTextStyle,
     this.topBorderColor,
-  }) : super(key: key);
+  });
 
   /// Represents message is sent by current user or not.
   final bool sentByCurrentUser;
