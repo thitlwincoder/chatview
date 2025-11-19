@@ -133,7 +133,7 @@ class _ChatGroupedListWidgetState extends State<ChatGroupedListWidget>
     final suggestionsListConfig =
         suggestionsConfig?.listConfig ?? const SuggestionListConfig();
     return SingleChildScrollView(
-      reverse: true,
+      // reverse: true,
       // When reaction popup is being appeared at that user should not scroll.
       physics: showPopUp ? const NeverScrollableScrollPhysics() : null,
       controller: widget.scrollController,
@@ -184,6 +184,8 @@ class _ChatGroupedListWidgetState extends State<ChatGroupedListWidget>
               valueListenable: chatViewIWNonNull.chatTextFieldHeight,
               builder: (_, value, __) => SizedBox(height: value),
             ),
+          // if (chatController?.initialMessageList.lastOrNull?.message != 'done')
+          SizedBox(height: MediaQuery.sizeOf(context).height * 0.6),
         ],
       ),
     );
@@ -274,9 +276,9 @@ class _ChatGroupedListWidgetState extends State<ChatGroupedListWidget>
 
           return ListView.builder(
             key: widget.key,
-            physics: const NeverScrollableScrollPhysics(),
-            padding: EdgeInsets.zero,
             shrinkWrap: true,
+            padding: const EdgeInsets.only(bottom: 140),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: (enableSeparator
                 ? messages.length + messageSeparator.length
                 : messages.length),
